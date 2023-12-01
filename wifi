@@ -1,0 +1,19 @@
+SETTING UP WIFI
+
+TURN WLAN ON
+rfkill
+rfkill unblock wlan
+
+WIFI CONNECT
+iwctl
+device list
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect "wireless network name"
+passphrase
+cntrl + d
+
+VERIFY CONNECTION
+ip a
+ping google.com
+cntrl + c
